@@ -6,7 +6,7 @@
 /*   By: iverniho <iverniho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 17:21:00 by Jskehan           #+#    #+#             */
-/*   Updated: 2024/08/27 12:02:42 by iverniho         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:58:07 by iverniho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ t_list	*create_commands(char **tokenized_input)
 {
 	t_cmd	*cmd;
 
-	tokenized_input = ft_remove_quotes(tokenized_input);
 	while (*tokenized_input)
 	{
 		cmd = create_command_node(tokenized_input);

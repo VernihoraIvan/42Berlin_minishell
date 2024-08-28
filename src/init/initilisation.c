@@ -6,7 +6,7 @@
 /*   By: iverniho <iverniho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:18:28 by Jskehan           #+#    #+#             */
-/*   Updated: 2024/08/27 12:10:50 by iverniho         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:57:08 by iverniho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	initialize_basic_env(char **envp)
 			exit(EXIT_FAILURE);
 		}
 	}
-	g_mini->envp = ft_setenv("SHELL", "jackoshell", g_mini->envp, 1);
+	g_mini->envp = ft_setenv("SHELL", "minihell", g_mini->envp, 1);
 }
 
 static void	set_shell_level(void)

@@ -6,7 +6,7 @@
 /*   By: iverniho <iverniho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:51:04 by iverniho          #+#    #+#             */
-/*   Updated: 2024/08/27 12:07:04 by iverniho         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:58:16 by iverniho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ char	*imp_while1(char *str, int *src_idx, int *var_idx)
 	{
 		var_name[(*var_idx)++] = str[(*src_idx)++];
 		var_name[(*var_idx)] = '\0';
-		env_value = getenv(var_name);
+		env_value = find_var(var_name);
 		if (env_value)
 			break ;
 	}
 	var_name[(*var_idx)] = '\0';
 	env_value = ((j = -1), (k = -1), NULL);
-	env_value = getenv(var_name);
+	env_value = find_var(var_name);
 	if (!env_value)
 	{
 		getenv_handler(&env_value, ft_strlen(var_name), &k);
